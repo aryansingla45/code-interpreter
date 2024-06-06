@@ -1,0 +1,7 @@
+PyPDF2
+pandas
+openpyxl
+docx
+opeani
+flake8
+black
