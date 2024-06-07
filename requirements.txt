@@ -1,7 +1,9 @@
-PyPDF2
+pdfplumber
 pandas
 openpyxl
+python-docx
 docx
-opeani
 flake8
 black
+openai==0.28
+
