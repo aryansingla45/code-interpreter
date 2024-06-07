@@ -15,11 +15,21 @@ def process_file(file_path, prompt):
     else:
         return "Unsupported file type"
 
-    code = generate_code(content, prompt)
-    code_file_path = save_generated_code(code)
-    result = execute_code(code_file_path)
+    # We are generating code based on the content of the file and the user's prompt by passing the data to OpenAI's API.
+    response = generate_code(content, prompt)
+
+    # Extract generated code and additional text from the API response
+    generated_code = response.get("code", "")
+    additional_text = response.get("text", "")
+
+    # We are saving the generated code to a file.
+    code_file = save_generated_code(generated_code)
+
+    # We are executing the generated code.
+    result = execute_code(code_file)
 
     return result
+
 
 
 if __name__ == "__main__":
