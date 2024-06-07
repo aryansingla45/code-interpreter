@@ -10,4 +10,4 @@
     `make run` or `python src/main.py`
 
 
-If you want to run all the commands using one then just use 'make install'
+If you want to run all the commands using one then just use `make install`
